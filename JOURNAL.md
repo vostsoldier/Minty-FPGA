@@ -69,3 +69,12 @@ I didn't attach a picture, but I mapped all of the relevant usb/flash pins to FP
 Remembering to keep 90 differential pair impedance for the USB traces, and thick traces for the power traces!
 I still need to do power, which might take alot of time :pensive:!  
 
+## 10/5/2025 8 PM - Placement + Routing of Caps + Power regulators  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjI3LCJwdXIiOiJibG9iX2lkIn19--17b7ead955c54cd42363190aa685c22bea589dd2/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjI4LCJwdXIiOiJibG9iX2lkIn19--9c8ca19c40895c97cfedf0f0e0c630af057015b6/image.png)
+
+For this journal entry, I finished doing all of the decoupling caps on the FPGA. Standard rule of 1 100n cap per power pin and a few 10u spread out. 
+The decoupling cap layout is a bit messy, but it is what it is :///
+I also did the routing of the power supply regulators. I didn't fully connect them to the FPGA/power plane yet, but it should just be a couple of copper pours and traces away!   
+
