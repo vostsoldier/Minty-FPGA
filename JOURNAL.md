@@ -27,3 +27,13 @@ Added net labels and connected the pins of the flash memory (did not do WP or RE
 Initializing the JTAG was easy, as they just needed a couple of pullups/pulldowns!
 I also decided on the RAM module that I wanted to use, which was the MT41J128M16JT-125_KTR. This is a 2GB DDR3 memory, for only ~$3, which is actually pretty affordable!  
 
+## 10/5/2025 1:18 AM - Finished RAM schematic + thoughts about potential routing.  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU3LCJwdXIiOiJibG9iX2lkIn19--d9cfd94075994c97c6398bea6a5f34a2ce4622b8/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU4LCJwdXIiOiJibG9iX2lkIn19--09465b85566c4d56f5d6a53aac43244991a2f9ee/image.png)
+
+Building off of the RAM module that I chose, I took a look at the reference manual/datasheet, and mapped the pins to the particular FPGA pin that was needed!
+I also added a bunch of decoupling caps since I needed a really stable and clean power source to the RAM. 
+Address and Data pins did not have a specific pin to map to, so I assigned it in a logical way that would make it the most easiest to route. 
+I also made sure to make a mental note to do impedance (50 ohms) and length matching.  
+
