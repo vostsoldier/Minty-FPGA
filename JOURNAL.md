@@ -78,3 +78,12 @@ For this journal entry, I finished doing all of the decoupling caps on the FPGA.
 The decoupling cap layout is a bit messy, but it is what it is :///
 I also did the routing of the power supply regulators. I didn't fully connect them to the FPGA/power plane yet, but it should just be a couple of copper pours and traces away!   
 
+## 10/5/2025 11 PM - Revised power supply/regulation + routing (TY TO CYAO!!!)  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjY0LCJwdXIiOiJibG9iX2lkIn19--c2df9b68db86ba62f0498c2e541f8cbea4d69ed8/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjY1LCJwdXIiOiJibG9iX2lkIn19--1c39bd0165e7d0045a994c3668211cb2eeb5dc27/image.png)
+
+After talking with Cyao, a neighborhood FPGA expert, I realized that I could have optimized my component selection! 
+Taking into account his feedback, I completely changed all of the TLV series *fixed* linear regulators to TPS series linear *adjustable* regulators. It added a few more discrete components, but it saved me a ton of money on JLC's extended part reel fee!
+I didn't add vias to the GND pads of the modules, since I still had to figure out where I would place them, and how I would link them up to the FPGA.  
+
