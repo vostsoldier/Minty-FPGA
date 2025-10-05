@@ -49,3 +49,14 @@ I put some 33 ohm resistors to improve ringing resistance, and provide a termina
 I had to spam skew tuning because most traces had to be length matches and my eyes just see squiggly lines....
 But yeah this was worth the effort and tomorrow I have to suffer doing power (backside of the board...)  
 
+## 10/5/2025 2 PM - Finished DDR3 Routing + USB Serial Schema   
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTMyLCJwdXIiOiJibG9iX2lkIn19--eaff97cd54fab908b4fba397cda2ae1bf853ac38/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTM0LCJwdXIiOiJibG9iX2lkIn19--5114536bd6b40da9ebcdf62613eb937218df2869/image.png)
+
+So I think I violated some common conventions of routing but here I am!!!
+Sadly I had to do via on pad for the DDR3 ram power, since they are decouplings and I can't place them too far...
+After that nightmare was over, I started on the USB + USB serial converter schematic since it was a pretty important portion to me! I took a look at the datasheet, and pin mapped relevantly!
+I also did the microSD schematic since it was decently easy, and I was really familiar with it!
+I'll probably start routing a bit later during the day!  
+
