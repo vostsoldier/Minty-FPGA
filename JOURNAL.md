@@ -10,7 +10,7 @@ This is my journal of the design and building process of **Minty FPGA**.
 You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/173).
 
 
-## 10/5/2025 - Started the FPGA schematic + power source + flash memory!  
+## 10/5/2025 1:10 AM - Started the FPGA schematic + power source + flash memory!  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDUzLCJwdXIiOiJibG9iX2lkIn19--10325b518c1b619ca2fa1d52d23c7a5788f552d9/image.png)
 
@@ -18,4 +18,12 @@ Added decoupling capacitors for VCCIO, VCC and a filtering system for VCCAUX.
 Tied all relevant VSS/VSSQ pins to ground, as per standard practice.
 Decided on components for the power source, and chose to use the AMS1117 (Fixed), for the main power supply, and then various TLV713xxPDBV modules for smaller voltage rails (DDR RAM + FPGA).
 Chose the W25Q128JVS, as this was a flash that was supported by the ECP5.   
+
+## 10/5/2025 1:14 AM - Finished flash memory + JTAG  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU2LCJwdXIiOiJibG9iX2lkIn19--b62b352250317785819c8d965952097fdfa09cff/image.png)
+
+Added net labels and connected the pins of the flash memory (did not do WP or RESET as they don't have specific FPGA pins). 
+Initializing the JTAG was easy, as they just needed a couple of pullups/pulldowns!
+I also decided on the RAM module that I wanted to use, which was the MT41J128M16JT-125_KTR. This is a 2GB DDR3 memory, for only ~$3, which is actually pretty affordable!  
 
