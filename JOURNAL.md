@@ -37,3 +37,15 @@ I also added a bunch of decoupling caps since I needed a really stable and clean
 Address and Data pins did not have a specific pin to map to, so I assigned it in a logical way that would make it the most easiest to route. 
 I also made sure to make a mental note to do impedance (50 ohms) and length matching.  
 
+## 10/5/2025 1:24 AM - Routed the DDR3 RAM (DID NOT DO POWER YET)  
+
+![Screenshot 2025-10-04 at 9.19.26 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU5LCJwdXIiOiJibG9iX2lkIn19--c44522d066de21a691b8de79bb9bb4403d8db58a/Screenshot%202025-10-04%20at%209.19.26%E2%80%AFPM.png)
+![Screenshot 2025-10-04 at 9.19.43 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDYwLCJwdXIiOiJibG9iX2lkIn19--60ac7df6d07803db3744faa9798e02ff07b1cc3f/Screenshot%202025-10-04%20at%209.19.43%E2%80%AFPM.png)
+![Screenshot 2025-10-04 at 9.19.54 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDYxLCJwdXIiOiJibG9iX2lkIn19--5ca63d77920917c186d838d488b9526851c03645/Screenshot%202025-10-04%20at%209.19.54%E2%80%AFPM.png)
+![Screenshot 2025-10-04 at 9.20.00 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDYyLCJwdXIiOiJibG9iX2lkIn19--947e2f6c0e18b138a364f75ab906bed00f7717ab/Screenshot%202025-10-04%20at%209.20.00%E2%80%AFPM.png)
+
+Keeping in mind the strict impedance (50 ohms) and length matching (clock + data + address traces), I started and finished the routing today. (This should be the most up to date thing for now). 
+I put some 33 ohm resistors to improve ringing resistance, and provide a termination point for the clock signals. Address did not need resistors, even though they are "recommended" as the trace lengths were under 1 inch! 
+I had to spam skew tuning because most traces had to be length matches and my eyes just see squiggly lines....
+But yeah this was worth the effort and tomorrow I have to suffer doing power (backside of the board...)  
+
