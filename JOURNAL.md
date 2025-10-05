@@ -60,3 +60,12 @@ After that nightmare was over, I started on the USB + USB serial converter schem
 I also did the microSD schematic since it was decently easy, and I was really familiar with it!
 I'll probably start routing a bit later during the day!  
 
+## 10/5/2025 5 PM - Routed USB + Flash Memory  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk0LCJwdXIiOiJibG9iX2lkIn19--ae7d02e1f334c30aed53d1d9b75538ffda953d4d/image.png)
+
+I finished routing all of the USB and flash memory components!!!
+I didn't attach a picture, but I mapped all of the relevant usb/flash pins to FPGA GPIOs. I tried my best to fanout the BGA in a way that saved most of the GPIO pins. 
+Remembering to keep 90 differential pair impedance for the USB traces, and thick traces for the power traces!
+I still need to do power, which might take alot of time :pensive:!  
+
