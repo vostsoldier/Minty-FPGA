@@ -87,3 +87,13 @@ After talking with Cyao, a neighborhood FPGA expert, I realized that I could hav
 Taking into account his feedback, I completely changed all of the TLV series *fixed* linear regulators to TPS series linear *adjustable* regulators. It added a few more discrete components, but it saved me a ton of money on JLC's extended part reel fee!
 I didn't add vias to the GND pads of the modules, since I still had to figure out where I would place them, and how I would link them up to the FPGA.  
 
+## 10/6/2025 - Finished routing all of the power yahoo  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjY3LCJwdXIiOiJibG9iX2lkIn19--db9da45d13ef5d4b106360e0abee463d025895f1/image.png)
+
+As you can see in the picture, I finished routing and placing the linear regulator modules. It feels a bit unoptimized to me, but for now its pretty functional and it works!
+I hate how there is empty space there, but it is a "oh well can't do much about it" moment.
+I'll probably clean up the vias since they look uneven, but overall a decent idea. 
+I forgot about the clock, so I have to make the schematic for that, but that is easy!!!
+I feel like I need more of a bang on the board, so tomorrow will just be tidying up and thoughts!   
+
