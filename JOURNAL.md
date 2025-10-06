@@ -87,7 +87,7 @@ After talking with Cyao, a neighborhood FPGA expert, I realized that I could hav
 Taking into account his feedback, I completely changed all of the TLV series *fixed* linear regulators to TPS series linear *adjustable* regulators. It added a few more discrete components, but it saved me a ton of money on JLC's extended part reel fee!
 I didn't add vias to the GND pads of the modules, since I still had to figure out where I would place them, and how I would link them up to the FPGA.  
 
-## 10/6/2025 - Finished routing all of the power yahoo  
+## 10/6/2025 12 AM - Finished routing all of the power yahoo  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjY3LCJwdXIiOiJibG9iX2lkIn19--db9da45d13ef5d4b106360e0abee463d025895f1/image.png)
 
@@ -96,4 +96,17 @@ I hate how there is empty space there, but it is a "oh well can't do much about 
 I'll probably clean up the vias since they look uneven, but overall a decent idea. 
 I forgot about the clock, so I have to make the schematic for that, but that is easy!!!
 I feel like I need more of a bang on the board, so tomorrow will just be tidying up and thoughts!   
+
+## 10/6/2025 3 AM - Created/Routed osc schematic + optimization  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6Njg3LCJwdXIiOiJibG9iX2lkIn19--1fe065f97ebf59d575688eaf5d4985f9497aa0d2/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6Njg4LCJwdXIiOiJibG9iX2lkIn19--5311d54e5b5743d933bc070205973c6822e105e4/image.png)
+
+I finally added the 100 MHz oscillator. I chose the ECS-3225MVQ-1000-CN-TR, since it was fairly cheap, but also reputable. The oscillation waves were very clean, suitable for my DDR3 clock references!
+I also optimized my power supply placement a bit, as I realized I had just enough space to squeeze in my AMS-1117 (3.3V fixed). 
+The design looked more clean overall!
+
+I fixed some traces as well, opting for a more professional and efficient route. 
+
+If you read this, I would appreciate it if you could DM me some ideas about what I should add next, like sensors or anything really cool!  
 
