@@ -110,3 +110,12 @@ I fixed some traces as well, opting for a more professional and efficient route.
 
 If you read this, I would appreciate it if you could DM me some ideas about what I should add next, like sensors or anything really cool!  
 
+## 10/6/2025 3 PM - Finished routing microSD + QOL improvements!  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NzY5LCJwdXIiOiJibG9iX2lkIn19--84228a4abeb6d6de7eddd39cb88fb810622032b1/image.png)
+
+Heyo guys, I finished routing all of the microSD pins!!!
+This part was a bit easy, since microSD doesn't need too much strict requirements, so I routed the traces cleanly, and made sure that they were decently length matchedish.
+I was thinking about moving the USB, and moving a few components to make the board smaller, but I did not want to risk getting too much interference (two high speed signals right next to each other (DDR3 + USB is not a good combo)... 
+I fixed up some traces, as I forgot to send 5V traces to the power regulators. I used a simple copper pour, (maybe three different copper pours on one layer is okay??) and did multiple vias + thick traces as the current was pretty big.  
+
