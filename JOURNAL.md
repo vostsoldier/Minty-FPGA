@@ -137,3 +137,12 @@ So I finished routing the microSD component, and pin mapped to the preferred pin
 I still need to connect a few power pins, so I will do some revisions + add a few LEDs tommorow!
 Otherwise the board should be almost complete!!!  
 
+## 10/7/2025 12 PM - Finished routing everything!!!!  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODc1LCJwdXIiOiJibG9iX2lkIn19--6d6984ca717f262da851d27e5ff01219dd3cee77/image.png)
+
+It's here!!! The finished routed version of the Minty board!!!
+All I did were a few minor changes, such as cleaning up vias, improving traces, connecting GND + Power pins. 
+Not too much, but it was definitely the more annoying portion...
+After I clean up my schematic and get reviews from professionals, I should be able to ship the board!!!  
+
