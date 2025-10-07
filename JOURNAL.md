@@ -146,3 +146,12 @@ All I did were a few minor changes, such as cleaning up vias, improving traces, 
 Not too much, but it was definitely the more annoying portion...
 After I clean up my schematic and get reviews from professionals, I should be able to ship the board!!!  
 
+## 10/7/2025 10 PM - Added pin headers + cleaned up routing + other QOL  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTc2LCJwdXIiOiJibG9iX2lkIn19--245536dee042d0a13428b5369d7f3dfa82dc6078/image.png)
+
+I added a 40 pin header, perfect for people who want to experiment using io pins!
+Added a couple of mounting holes and filleted edge cuts!
+Moved a couple of components around a bit to make the design look a bit more cleaner, and messed with the traces to make them look more clean/efficent. 
+I may or may not change the FPGA decoupling caps later, as it is a bit messyish/  
+
