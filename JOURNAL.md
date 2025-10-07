@@ -119,3 +119,13 @@ This part was a bit easy, since microSD doesn't need too much strict requirement
 I was thinking about moving the USB, and moving a few components to make the board smaller, but I did not want to risk getting too much interference (two high speed signals right next to each other (DDR3 + USB is not a good combo)... 
 I fixed up some traces, as I forgot to send 5V traces to the power regulators. I used a simple copper pour, (maybe three different copper pours on one layer is okay??) and did multiple vias + thick traces as the current was pretty big.  
 
+## 10/7/2025 - Routed HDMI connector + schematic  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODQwLCJwdXIiOiJibG9iX2lkIn19--cb397e3e2a41077b17d734681ca940397d7fc2fa/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODQxLCJwdXIiOiJibG9iX2lkIn19--cd7082587bed33aa04e701cef44299b81498f2c4/image.png)
+
+Okay before I start, I just want say. Cramming a HDMI connector into BGA pads is not fun. At all.
+I basically removed the entire microsd for now, since HDMI had to be closer to the FPGA cuz signal priority + high speed signals etc etc... 
+I'll probably put microSD at a later time, maybe above the HDMI connector. 
+I still have some space for one more cool thing, so I need more ideas lol!!!  
+
