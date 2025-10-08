@@ -155,3 +155,13 @@ Added a couple of mounting holes and filleted edge cuts!
 Moved a couple of components around a bit to make the design look a bit more cleaner, and messed with the traces to make them look more clean/efficent. 
 I may or may not change the FPGA decoupling caps later, as it is a bit messyish/  
 
+## 10/8/2025 - Polished up the schematic + waiting for professional review  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEzMiwicHVyIjoiYmxvYl9pZCJ9fQ==--51d53615471efeacedf3e5364c830a91d5835a47/image.png)
+
+So after last update, where I finished up the routing, this time I tried to fix up the schematic to make it look pretty for professionals to review. I sent it over to KiCAD's official server, where experienced people will look at it!
+
+Cleaning up the schematic was ridicously annoying, as I had to move all of the dang FPGA pins around... That was a whole time with carpal tunnel...
+
+After I get a review of my schematic + routing, I'll fix all of the errors on the next update!  
+
