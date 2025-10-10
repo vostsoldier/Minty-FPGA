@@ -173,3 +173,11 @@ After I get a review of my schematic + routing, I'll fix all of the errors on th
 I got feedback from professionals from the KiCAD official server, and there were no major faults!!! Hip hip hooray lol!!!
 I fixed a few things like adding more vias since they don't cost anything to add, fixing up some traces, double checking that values were correct, and adding some silkscreen so that the board looked nice/I knew what was what!  
 
+## 10/10/2025 - Finished BOM + Gerbers  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQxNCwicHVyIjoiYmxvYl9pZCJ9fQ==--ad8929f4522a5741954bc37b3836bb962c5d1c89/image.png)
+
+Hey everyone!
+I recently finished the BOM and finished organizing all of the Gerbers. As per Blueprint instructions, I have uploaded all of them to the github repo, so feel free to check them out. For now I haven't uploaded all of the libraries/3d models I have used for the components, which I will do at a later date. 
+Next stop will be finding a suitable price for everything!  
+
