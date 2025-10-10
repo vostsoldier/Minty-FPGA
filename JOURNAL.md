@@ -10,7 +10,7 @@ This is my journal of the design and building process of **Minty FPGA**.
 You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/173).
 
 
-## 10/5/2025 1:10 AM - Started the FPGA schematic + power source + flash memory!  
+## 10/4/2025 9:10 PM - Started the FPGA schematic + power source + flash memory!  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDUzLCJwdXIiOiJibG9iX2lkIn19--10325b518c1b619ca2fa1d52d23c7a5788f552d9/image.png)
 
@@ -19,7 +19,7 @@ Tied all relevant VSS/VSSQ pins to ground, as per standard practice.
 Decided on components for the power source, and chose to use the AMS1117 (Fixed), for the main power supply, and then various TLV713xxPDBV modules for smaller voltage rails (DDR RAM + FPGA).
 Chose the W25Q128JVS, as this was a flash that was supported by the ECP5.   
 
-## 10/5/2025 1:14 AM - Finished flash memory + JTAG  
+## 10/4/2025 9:14 PM - Finished flash memory + JTAG  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU2LCJwdXIiOiJibG9iX2lkIn19--b62b352250317785819c8d965952097fdfa09cff/image.png)
 
@@ -27,7 +27,7 @@ Added net labels and connected the pins of the flash memory (did not do WP or RE
 Initializing the JTAG was easy, as they just needed a couple of pullups/pulldowns!
 I also decided on the RAM module that I wanted to use, which was the MT41J128M16JT-125_KTR. This is a 2GB DDR3 memory, for only ~$3, which is actually pretty affordable!  
 
-## 10/5/2025 1:18 AM - Finished RAM schematic + thoughts about potential routing.  
+## 10/4/2025 9:18 PM - Finished RAM schematic + thoughts about potential routing.  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU3LCJwdXIiOiJibG9iX2lkIn19--d9cfd94075994c97c6398bea6a5f34a2ce4622b8/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU4LCJwdXIiOiJibG9iX2lkIn19--09465b85566c4d56f5d6a53aac43244991a2f9ee/image.png)
@@ -37,7 +37,7 @@ I also added a bunch of decoupling caps since I needed a really stable and clean
 Address and Data pins did not have a specific pin to map to, so I assigned it in a logical way that would make it the most easiest to route. 
 I also made sure to make a mental note to do impedance (50 ohms) and length matching.  
 
-## 10/5/2025 1:24 AM - Routed the DDR3 RAM (DID NOT DO POWER YET)  
+## 10/4/2025 9:24 PM - Routed the DDR3 RAM (DID NOT DO POWER YET)  
 
 ![Screenshot 2025-10-04 at 9.19.26 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDU5LCJwdXIiOiJibG9iX2lkIn19--c44522d066de21a691b8de79bb9bb4403d8db58a/Screenshot%202025-10-04%20at%209.19.26%E2%80%AFPM.png)
 ![Screenshot 2025-10-04 at 9.19.43 PM.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NDYwLCJwdXIiOiJibG9iX2lkIn19--60ac7df6d07803db3744faa9798e02ff07b1cc3f/Screenshot%202025-10-04%20at%209.19.43%E2%80%AFPM.png)
@@ -49,7 +49,7 @@ I put some 33 ohm resistors to improve ringing resistance, and provide a termina
 I had to spam skew tuning because most traces had to be length matches and my eyes just see squiggly lines....
 But yeah this was worth the effort and tomorrow I have to suffer doing power (backside of the board...)  
 
-## 10/5/2025 2 PM - Finished DDR3 Routing + USB Serial Schema   
+## 10/5/2025 10 AM - Finished DDR3 Routing + USB Serial Schema   
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTMyLCJwdXIiOiJibG9iX2lkIn19--eaff97cd54fab908b4fba397cda2ae1bf853ac38/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTM0LCJwdXIiOiJibG9iX2lkIn19--5114536bd6b40da9ebcdf62613eb937218df2869/image.png)
@@ -60,7 +60,7 @@ After that nightmare was over, I started on the USB + USB serial converter schem
 I also did the microSD schematic since it was decently easy, and I was really familiar with it!
 I'll probably start routing a bit later during the day!  
 
-## 10/5/2025 5 PM - Routed USB + Flash Memory  
+## 10/5/2025 1 PM - Routed USB + Flash Memory  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NTk0LCJwdXIiOiJibG9iX2lkIn19--ae7d02e1f334c30aed53d1d9b75538ffda953d4d/image.png)
 
@@ -69,7 +69,7 @@ I didn't attach a picture, but I mapped all of the relevant usb/flash pins to FP
 Remembering to keep 90 differential pair impedance for the USB traces, and thick traces for the power traces!
 I still need to do power, which might take alot of time :pensive:!  
 
-## 10/5/2025 8 PM - Placement + Routing of Caps + Power regulators  
+## 10/5/2025 4 PM - Placement + Routing of Caps + Power regulators  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjI3LCJwdXIiOiJibG9iX2lkIn19--17b7ead955c54cd42363190aa685c22bea589dd2/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjI4LCJwdXIiOiJibG9iX2lkIn19--9c8ca19c40895c97cfedf0f0e0c630af057015b6/image.png)
@@ -78,7 +78,7 @@ For this journal entry, I finished doing all of the decoupling caps on the FPGA.
 The decoupling cap layout is a bit messy, but it is what it is :///
 I also did the routing of the power supply regulators. I didn't fully connect them to the FPGA/power plane yet, but it should just be a couple of copper pours and traces away!   
 
-## 10/5/2025 11 PM - Revised power supply/regulation + routing (TY TO CYAO!!!)  
+## 10/5/2025 7 PM - Revised power supply/regulation + routing (TY TO CYAO!!!)  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjY0LCJwdXIiOiJibG9iX2lkIn19--c2df9b68db86ba62f0498c2e541f8cbea4d69ed8/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjY1LCJwdXIiOiJibG9iX2lkIn19--1c39bd0165e7d0045a994c3668211cb2eeb5dc27/image.png)
@@ -87,7 +87,7 @@ After talking with Cyao, a neighborhood FPGA expert, I realized that I could hav
 Taking into account his feedback, I completely changed all of the TLV series *fixed* linear regulators to TPS series linear *adjustable* regulators. It added a few more discrete components, but it saved me a ton of money on JLC's extended part reel fee!
 I didn't add vias to the GND pads of the modules, since I still had to figure out where I would place them, and how I would link them up to the FPGA.  
 
-## 10/6/2025 12 AM - Finished routing all of the power yahoo  
+## 10/5/2025 8 PM - Finished routing all of the power yahoo  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NjY3LCJwdXIiOiJibG9iX2lkIn19--db9da45d13ef5d4b106360e0abee463d025895f1/image.png)
 
@@ -97,7 +97,7 @@ I'll probably clean up the vias since they look uneven, but overall a decent ide
 I forgot about the clock, so I have to make the schematic for that, but that is easy!!!
 I feel like I need more of a bang on the board, so tomorrow will just be tidying up and thoughts!   
 
-## 10/6/2025 3 AM - Created/Routed osc schematic + optimization  
+## 10/5/2025 11 PM - Created/Routed osc schematic + optimization  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6Njg3LCJwdXIiOiJibG9iX2lkIn19--1fe065f97ebf59d575688eaf5d4985f9497aa0d2/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6Njg4LCJwdXIiOiJibG9iX2lkIn19--5311d54e5b5743d933bc070205973c6822e105e4/image.png)
@@ -110,7 +110,7 @@ I fixed some traces as well, opting for a more professional and efficient route.
 
 If you read this, I would appreciate it if you could DM me some ideas about what I should add next, like sensors or anything really cool!  
 
-## 10/6/2025 3 PM - Finished routing microSD + QOL improvements!  
+## 10/6/2025 11 AM - Finished routing microSD + QOL improvements!  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NzY5LCJwdXIiOiJibG9iX2lkIn19--84228a4abeb6d6de7eddd39cb88fb810622032b1/image.png)
 
@@ -119,7 +119,7 @@ This part was a bit easy, since microSD doesn't need too much strict requirement
 I was thinking about moving the USB, and moving a few components to make the board smaller, but I did not want to risk getting too much interference (two high speed signals right next to each other (DDR3 + USB is not a good combo)... 
 I fixed up some traces, as I forgot to send 5V traces to the power regulators. I used a simple copper pour, (maybe three different copper pours on one layer is okay??) and did multiple vias + thick traces as the current was pretty big.  
 
-## 10/7/2025 3:20 AM - Routed HDMI connector + schematic  
+## 10/6/2025 11:20 PM - Routed HDMI connector + schematic  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODQwLCJwdXIiOiJibG9iX2lkIn19--cb397e3e2a41077b17d734681ca940397d7fc2fa/image.png)
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODQxLCJwdXIiOiJibG9iX2lkIn19--cd7082587bed33aa04e701cef44299b81498f2c4/image.png)
@@ -129,7 +129,7 @@ I basically removed the entire microsd for now, since HDMI had to be closer to t
 I'll probably put microSD at a later time, maybe above the HDMI connector. 
 I still have some space for one more cool thing, so I need more ideas lol!!!  
 
-## 10/7/2025 3:43 AM - Finished routing microSD (for real this time)  
+## 10/6/2025 11:43 PM - Finished routing microSD (for real this time)  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODQyLCJwdXIiOiJibG9iX2lkIn19--64c23440cdb021f955ac935fc058e04300573d78/image.png)
 
@@ -137,7 +137,7 @@ So I finished routing the microSD component, and pin mapped to the preferred pin
 I still need to connect a few power pins, so I will do some revisions + add a few LEDs tommorow!
 Otherwise the board should be almost complete!!!  
 
-## 10/7/2025 12 PM - Finished routing everything!!!!  
+## 10/7/2025 8 AM - Finished routing everything!!!!  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6ODc1LCJwdXIiOiJibG9iX2lkIn19--6d6984ca717f262da851d27e5ff01219dd3cee77/image.png)
 
@@ -146,7 +146,7 @@ All I did were a few minor changes, such as cleaning up vias, improving traces, 
 Not too much, but it was definitely the more annoying portion...
 After I clean up my schematic and get reviews from professionals, I should be able to ship the board!!!  
 
-## 10/7/2025 10 PM - Added pin headers + cleaned up routing + other QOL  
+## 10/7/2025 6 PM - Added pin headers + cleaned up routing + other QOL  
 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTc2LCJwdXIiOiJibG9iX2lkIn19--245536dee042d0a13428b5369d7f3dfa82dc6078/image.png)
 
@@ -164,4 +164,12 @@ So after last update, where I finished up the routing, this time I tried to fix 
 Cleaning up the schematic was ridicously annoying, as I had to move all of the dang FPGA pins around... That was a whole time with carpal tunnel...
 
 After I get a review of my schematic + routing, I'll fix all of the errors on the next update!  
+
+## 10/9/2025 - Feedback implementation + silkscreen  
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTMwOCwicHVyIjoiYmxvYl9pZCJ9fQ==--c646bf0f1d50401bd0061a838a8a9fd498bd9a7a/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTMwNiwicHVyIjoiYmxvYl9pZCJ9fQ==--778ceb2277686ea4321380bfa7a5cb44d56bdcc2/image.png)
+
+I got feedback from professionals from the KiCAD official server, and there were no major faults!!! Hip hip hooray lol!!!
+I fixed a few things like adding more vias since they don't cost anything to add, fixing up some traces, double checking that values were correct, and adding some silkscreen so that the board looked nice/I knew what was what!  
 
